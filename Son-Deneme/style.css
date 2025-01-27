@@ -18,6 +18,26 @@
     background-color: white !important; /* Arka planı beyaz yap */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Alt kısma gölge ekle */
 }
+ /* Sayfa kararması için overlay - sadece ana içerik kısmında */
+ .overlay {
+    position: fixed;
+    top: 120px; /* Navbar'ların hemen altından başlasın */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none; /* Başlangıçta görünmesin */
+    z-index: 1050; /* Dropdown'ın üzerine gelsin */
+}
+.dropdown-menu.show {
+    display: block;
+    z-index: 1060; /* Dropdown açıldığında üzerine gelsin */
+}
+
+/* Kararmaması gereken navbarlar */
+.no-overlay {
+    z-index: 1100; /* Diğer içeriklerden üstte olacak şekilde */
+}
 
 /* Yazı rengini siyah yap */
 .navbar .nav-link {
@@ -70,8 +90,8 @@
     height: 350px;
     margin: 0 auto; /* Ortalamak için */
     overflow: hidden; /* Resmin taşmaması için */
-    margin-bottom: 20px; /* Banner'lar arasında boşluk */
-    margin-top: 140px;
+    margin-bottom: 10px; /* Banner'lar arasında boşluk */
+    margin-top: 70px;
 }
 .banner img {
     width: 100%;
@@ -83,6 +103,7 @@ footer {
     padding: 20px;
     background-color: #333;
     color: white;
+    margin-top: 50px;
 }
 
 /* Modal Stili */
