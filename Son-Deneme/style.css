@@ -123,6 +123,7 @@ body {
     height: auto; /* Yükseklik otomatik, oran korunur */
     margin: 0 auto; /* Ortalamak için */
     overflow: hidden; /* Taşan içeriği gizlemek için */
+    margin-top: 40px;
 }
 
 .banner img {
@@ -154,5 +155,43 @@ body {
         width: 100%; /* Banner genişliğine uyumlu */
         height: 100%; /* Banner yüksekliğine uyumlu */
         object-fit: cover; /* Kırpmadan doldur */
+    }
+}
+
+/* Submenu */
+.sub-menu {
+    display: none;
+    list-style: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    top: 90%;   
+    padding: 0;
+    min-width: 150px; /* Optional: set a minimum width for the dropdown */
+    z-index: 1000; /* Üstte olmasını sağlar */
+}
+
+.nav-links li:hover .sub-menu {
+    display: block;
+}
+
+/* Submenu items */
+.sub-menu li {
+    padding: 10px;
+}
+
+.sub-menu li a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    padding: 40px 20px; /* Sol ve sağda padding ekleyerek alanı genişletme */
+}
+
+/* Mobile version dropdown */
+@media (max-width: 768px) {
+    .sub-menu {
+        position: static;
+        margin-top: 0;
     }
 }
