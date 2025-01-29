@@ -176,6 +176,7 @@ body {
     display: block;
 }
 
+
 /* Submenu items */
 .sub-menu li {
     padding: 10px;
@@ -185,11 +186,18 @@ body {
     text-decoration: none;
     color: black;
     font-size: 14px;
-    padding: 20px 10px; /* Sol ve sağda padding ekleyerek alanı genişletme */
+    padding: 15px 0px; /* Sol ve sağda padding ekleyerek alanı genişletme */
+
 }
 .toggle-arrow {
-    font-size: 15px;
-    margin-left: 10px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    transform: rotate(-45deg);
+    transition: transform 0.3s ease-in-out;
+    margin-left: 8px;
 }
 .sub-menu.open {
     display: block; /* Alt menüyü göster */
@@ -212,4 +220,120 @@ body {
         position: static;
         margin-top: 0;
     }
+}
+
+.menu-item.open .toggle-arrow {
+    transform: rotate(45deg);
+}
+
+
+
+.sub-menu.open {
+    max-height: 500px; /* Yeterince büyük bir değer veriyoruz */
+    opacity: 1;
+}
+  
+.toggle-arrow {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.toggle-arrow.open {
+    transform: rotate(270deg); /* Açılınca oku çevir */
+}
+
+
+
+/* Footer */
+.footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 55px;
+}
+
+.footer-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-links li {
+    display: inline;
+}
+
+.footer-links a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+
+.drop-menu {
+    display: none;
+    list-style: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    top: 90%;   
+    padding: 0;
+    min-width: 150px; /* Optional: set a minimum width for the dropdown */
+    z-index: 1000; /* Üstte olmasını sağlar */
+}
+
+.nav-links li:hover .drop-menu {
+    display: block;
+}
+
+/* Submenu items */
+.drop-menu li {
+    padding: 10px;
+}
+
+.drop-menu li a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    padding: 0px 0px; /* Sol ve sağda padding ekleyerek alanı genişletme */
+
+}
+.drop-menu.open {
+    display: block; /* Alt menüyü göster */
+}
+
+.drop-menu.open + a .toggle-arrow {
+    transform: rotate(180deg); /* Ok işaretini döndür */
+    transition: transform 0.3s ease;
+}
+/* Alt menü öğelerini stilize et */
+.drop-menu a {
+    font-size: 16px;
+    color: #333;
+    padding: 5px 0;
+}
+
+/* Mobile version dropdown */
+@media (max-width: 768px) {
+    .drop-menu {
+        position: static;
+        margin-top: 0;
+    }
+}
+
+.nav-links ul li a{
+    padding: 38px 10px;
 }
