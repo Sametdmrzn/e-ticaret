@@ -185,7 +185,25 @@ body {
     text-decoration: none;
     color: black;
     font-size: 14px;
-    padding: 40px 20px; /* Sol ve sağda padding ekleyerek alanı genişletme */
+    padding: 20px 10px; /* Sol ve sağda padding ekleyerek alanı genişletme */
+}
+.toggle-arrow {
+    font-size: 15px;
+    margin-left: 10px;
+}
+.sub-menu.open {
+    display: block; /* Alt menüyü göster */
+}
+
+.sub-menu.open + a .toggle-arrow {
+    transform: rotate(180deg); /* Ok işaretini döndür */
+    transition: transform 0.3s ease;
+}
+/* Alt menü öğelerini stilize et */
+.sub-menu a {
+    font-size: 16px;
+    color: #333;
+    padding: 5px 0;
 }
 
 /* Mobile version dropdown */
