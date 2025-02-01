@@ -5,6 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            padding: 20px;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .product button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .cart {
+            margin-top: 20px;
+            background: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .cart h2 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cart-item button {
+            background: red;
+            color: white;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 100%;
+                padding: 15px;
+            }
+            .cart-item {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
 <header class="header">
@@ -16,7 +96,7 @@
     <li>
         <a href="esarp.html">EŞARP</a>
         <ul class="drop-menu">
-            <li><a href="flamPamukEsarp.html">Flamlı Pamuk Eşarp</a></li>
+            <li><a href="esarp.html">Flamlı Pamuk Eşarp</a></li>
             <li><a href="desenliEsarp.html">Desenli Eşarp</a></li>
             <li><a href="duzFlamliEsarp.html">Düz Flamlı Eşarp</a></li>
             <li><a href="taşliPamukEsarp.html">Taşlı Pamuk Eşarp</a></li>
@@ -110,52 +190,14 @@
 
 
 
-<div class="product-list">
-    <div class="product">
-        <img src="images/product/Eşarp1.webp" alt="Flamlı Pamuk Eşarp" class="product-image">
-        <div class="product-info">
-            <h3>Flamlı Pamuk Eşarp</h3>
-            <p class="price">Fiyat: 199 TL</p>
-            <button class="add-to-cart"><span>Sepete Ekle</span></button>
-        </div>
-    </div>
-    
 
-    <div class="product">
-        <img src="images/product/Eşarp1.webp" alt="Desenli Eşarp" class="product-image">
-        <div class="product-info">
-            <h3>Desenli Eşarp</h3>
-            <p class="price">Fiyat: 229 TL</p>
-            <button class="add-to-cart"><span>Sepete Ekle</span></button>
-        </div>
-    </div>
-    <div class="product">
-        <img src="images/product/Eşarp1.webp" alt="Desenli Eşarp" class="product-image">
-        <div class="product-info">
-            <h3>Desenli Eşarp</h3>
-            <p class="price">Fiyat: 229 TL</p>
-            <button class="add-to-cart"><span>Sepete Ekle</span></button>
-        </div>
-    </div>
-    <div class="product">
-        <img src="images/product/Eşarp1.webp" alt="Desenli Eşarp" class="product-image">
-        <div class="product-info">
-            <h3>Desenli Eşarp</h3>
-            <p class="price">Fiyat: 229 TL</p>
-            <button class="add-to-cart"><span>Sepete Ekle</span></button>
-        </div>
-    </div>
-    <div class="product">
-        <img src="images/product/Eşarp1.webp" alt="Desenli Eşarp" class="product-image">
-        <div class="product-info">
-            <h3>Desenli Eşarp</h3>
-            <p class="price">Fiyat: 229 TL</p>
-            <button class="add-to-cart"><span>Sepete Ekle</span></button>
-
-        </div>
-    </div>
+<!-- Sepet Görüntüleme Alanı -->
+<div class="cart">
+    <h2>Sepetiniz</h2>
+    <div id="cart-items">Sepetiniz boş</div>
 </div>
 
+<button id="send-cart">Sepeti Gönder</button>
 
 <footer class="footer">
     <div class="footer-container">
@@ -165,6 +207,8 @@
             <li><a href="iletisim.html">İletişim</a></li>
         </ul>
     </div>
+</footer>
+
 </footer>
 
 
