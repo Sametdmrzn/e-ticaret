@@ -1,125 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZerCollection</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
 </head>
 <body>
-<header class="header">
-    <nav class="navbar">
-        <a href="#" class="navbar-brand">ZerCollection</a>
-        
-     <!-- Masaüstü Menü -->
-<ul class="nav-links">
-    <li>
-        <a href="#">EŞARP</a>
-        <ul class="drop-menu">
-            <li><a href="#">Alt Kategori 1</a></li>
-            <li><a href="#">Alt Kategori 2</a></li>
-            <li><a href="#">Alt Kategori 3</a></li>
-        </ul>
-    </li>
-    <li><a href="#">BONE</a>
-        <ul class="drop-menu">
-            <li><a href="#">Alt Kategori 1</a></li>
-            <li><a href="#">Alt Kategori 2</a></li>
-            <li><a href="#">Alt Kategori 3</a></li>
-        </ul></li>
-    <li><a href="#">HAVLU ÇEŞİTLERİ</a>
-    </li>
-    <li><a href="#">BAYAN ATLET</a></li>
-    <li><a href="#">BAYAN BATO</a>
-        <ul class="drop-menu">
-            <li><a href="#">Alt Kategori 1</a></li>
-            <li><a href="#">Alt Kategori 2</a></li>
-            <li><a href ="#">Alt Kategori 3</a></li>
-        </ul></li>
-    <li><a href="#">BAYAN TAYT</a></li>
-    <li><a href="#">BAYAN PİJAMA TAKIMI</a></li>
-    <li><a href="#">BAYAN EŞOFMAN TAKIMI</a></li>
-</ul>
 
-        <!-- Sepet İkonu -->
-        <a href="#" class="cart-icon">
-            🛒
-        </a>
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" class="navbar-brand">MyShop</a>
+            
+            <!-- Masaüstü Menü -->
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            
+            <!-- Sepet İkonu -->
+            <a href="#" class="cart-icon">
+                🛒
+            </a>
+    
+            <!-- Mobil Hamburger Menüsü -->
+            <button class="navbar-toggler">
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+    
+        <!-- Mobil Menü -->
+        <div id="mobileMenu" class="mobile-menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </header>
 
-        <!-- Mobil Hamburger Menüsü -->
-        <button class="navbar-toggler">
-            <span class="navbar-toggler-icon"></span>
-            <span class="navbar-toggler-icon"></span>
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </nav>
-
-    <div id="mobileMenu" class="mobile-menu">
-        <ul>
-            <li>
-                <a href="#">EŞARP <span class="toggle-arrow"></span></a>
-                <!-- Dropdown Menü -->
-                <ul class="sub-menu">
-                    <li><a href="#">Flamlı Pamuk Eşarp</a></li>
-                    <li><a href="#">Desenli Eşarp</a></li>
-                    <li><a href="#">Düz Flamlı Eşarp</a></li>
-                    <li><a href="#">Taşlı Pamuk Eşarp</a></li>
-                    <li><a href="#">Dijital Soft Eşarp</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">BONE <span class="toggle-arrow"></span></a>
-                <ul class="sub-menu">
-                    <li><a href="#">Dikişsiz Fırfırlı Eşarp</a></li>
-                    <li><a href="#">Fırfırlı Bone Siyah</a></li>
-                    <li><a href="#">Bağlamalı Penye bone</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">HAVLU ÇEŞİTLERİ <span class="toggle-arrow"></span></a>
-                <ul class="sub-menu">
-                    <li><a href="#">Mutfak Havlusu</a></li>
-                    <li><a href="#">El Yüz Havlusu</a></li>
-                    <li><a href="#">Banyo Havlusu</a></li>
-                    <li><a href="#">Ayak Havlusu</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">BAYAN ATLET <span class="toggle-arrow"></span></a>
-                <ul class="sub-menu">
-                    <li><a href="#">Bayan Kalın Askılı</a></li>
-                    <li><a href="#">Ayarlanabilir İp Askılı</a></li>
-                </ul>
-            </li>
-            <li><a href="#">BAYAN BATO</a></li>
-            <li><a href="#">BAYAN TAYT</a></li>
-            <li><a href="#">BAYAN PİJAMA TAKIMI</a></li>
-            <li><a href="#">BAYAN EŞOFMAN ALTI</a></li>
-        </ul>
+<!-- Banner 1 -->
+<section class="banner">
+    <div class="container">
+        <img src="images/banners/banner.jpg" alt="Banner 1" class="img-fluid">
     </div>
-</header>
+</section>
 
-
-<div class="banner">
-    <img src="images/banners/Gray Minimalist New Collection Banner-min.png" alt="Banner Image">
-</div>
-<div class="banner">
-    <img src="images/banners/Gray Minimalist New Collection Banner-min.png" alt="Banner Image">
-</div>
-
-
-<footer class="footer">
-    <div class="footer-container">
-        <p>&copy; 2025 Tüm Hakları Saklıdır.</p>
-        <ul class="footer-links">
-            <li><a href="#">Gizlilik Politikası</a></li>
-            <li><a href="#">İletişim</a></li>
-        </ul>
+<!-- Banner 2 -->
+<section class="banner">
+    <div class="container">
+        <img src="images/banners/Gray Minimalist New Collection Banner.png" alt="Banner 2" class="img-fluid">
     </div>
-</footer>
+</section>
 
 
 
-<script src='script.js' ></script>
+
+    <!-- Footer (Mobil Uyumlu) -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 ZerColection. Tüm hakları saklıdır.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+// Hamburger menüsü ve mobil navbar seçicilerini tanımla
+const navbarToggler = document.querySelector('.navbar-toggler');
+const mobileNavbar = document.querySelector('#mobileNavbar');
+
+// Hamburger menüsüne tıklayınca menüyü aç/kapat
+navbarToggler.addEventListener('click', () => {
+    mobileNavbar.classList.toggle('open'); // Menüyü aç/kapat
+    document.body.classList.toggle('no-scroll'); // Sayfa kaydırmasını engelle/aç
+});
+
+// Sayfa kaydırmayı mobil menü açıkken engelle
+document.body.addEventListener('click', (e) => {
+    if (!mobileNavbar.contains(e.target) && !navbarToggler.contains(e.target)) {
+        mobileNavbar.classList.remove('open'); // Menü kapanır
+        document.body.classList.remove('no-scroll'); // Sayfa kaydırması aktif
+    }
+});
+
+    </script>
 </body>
 </html>
