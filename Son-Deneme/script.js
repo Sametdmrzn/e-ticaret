@@ -1,38 +1,32 @@
-const navbarToggler = document.querySelector('.navbar-toggler');
-const mobileMenu = document.querySelector('#mobileMenu');
+// Ürün resimlerine tıklanabilirlik ekleyelim
+const productImages = document.querySelectorAll('.product-image');
 
-
-// Hamburger menüsüne tıklanınca mobil menüyü aç/kapat
-navbarToggler.addEventListener('click', () => {
-    mobileMenu.classList.toggle('open');
-});
-
-// Dropdown menüyü açma / kapama
-const dropdownLinks = document.querySelectorAll('.mobile-menu > ul > li > a');
-
-dropdownLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-        const submenu = link.nextElementSibling; // Alt menüyü al
-        const arrow = link.querySelector('.toggle-arrow'); // Ok işaretini al
-
-        if (submenu && submenu.classList.contains('sub-menu')) {
-            e.preventDefault(); // Menü linkine gitmesini engelle
-
-            // Önce diğer açık menüleri kapat (Eğer birden fazla açık olsun istemiyorsan)
-            document.querySelectorAll('.sub-menu.open').forEach(openMenu => {
-                if (openMenu !== submenu) {
-                    openMenu.classList.remove('open');
-                    openMenu.previousElementSibling.querySelector('.toggle-arrow').classList.remove('open');
-                }
-            });
-
-            // Seçili menüyü aç/kapa
-            submenu.classList.toggle('open'); 
-            if (arrow) {
-                arrow.classList.toggle('open'); // Ok işaretini döndür
-            }
-        }
+productImages.forEach(image => {
+    image.addEventListener('click', () => {
+        // Tıklanan resmi büyütmek için bir modal açılacak
+        const modal = document.createElement('div');
+        modal.classList.add('modal');
+        
+        const img = document.createElement('img');
+        img.src = image.src;
+        img.classList.add('modal-image');
+        modal.appendChild(img);
+        
+        document.body.appendChild(modal);
+        
+        // Modal kapanması için
+        modal.addEventListener('click', () => {
+            modal.remove();
+        });
     });
 });
 
+function showOverlay() {
+    document.getElementById('overlay').style.display = 'block';
+}
+
+// Sayfa kararması için overlay'yi gizle
+function hideOverlay() {
+    document.getElementById('overlay').style.display = 'none';
+}
 
