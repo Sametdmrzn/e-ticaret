@@ -400,11 +400,11 @@ body {
     padding: 10px 20px;
     background-color: #ff6347;
     color: white;
-    font-size: 16px;
+    font-size: 16px;    
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+transition: background-color 0.3s ease;
 }
 
 .add-to-cart:hover {
@@ -483,10 +483,110 @@ body {
 }
 
 
-.product add-to-cart span {
+.product .add-to-cart span {
     transition: color 0.5s ease;
 }
 
-.product add-to-cart.active span {
+.product .add-to-cart.active span {
     color: transparent;  /* Yazıyı kaybetmek için renk değiştirin */
+}
+
+#send-cart {
+    background: linear-gradient(45deg, #4CAF50, #2e7d32); /* Yeşil tonlarında gradient */
+    border: none;
+    border-radius: 30px; /* Yuvarlak köşeler */
+    color: white; /* Beyaz yazı rengi */
+    font-size: 16px; /* Yazı boyutu */
+    font-weight: bold; /* Kalın yazı tipi */
+    padding: 12px 30px; /* Dikey ve yatay padding */
+    cursor: pointer; /* Fare imlecini el işareti yapma */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Animasyon */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+}
+
+#send-cart:hover {
+    background-color: #45a049; /* Hover durumunda daha koyu yeşil */
+    transform: translateY(-3px); /* Hover efektiyle buton yukarı kayar */
+}
+
+#send-cart:active {
+    transform: translateY(2px); /* Butona basıldığında bir miktar aşağı kayar */
+}
+
+/* Sepet Görüntüleme Alanı */
+.cart {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.cart h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Sepet konteyneri */
+#cart-items {
+    padding: 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sepet öğesi */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Sepet içeriği */
+.cart-item span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Silme butonu */
+.delete-button {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.delete-button:hover {
+    background: #c82333;
+}
+
+
+/* Silme butonunun temel stilini ayarlama */
+.remove-btn {
+    background-color: #f44336; /* Kırmızı arka plan */
+    color: white; /* Beyaz yazı rengi */
+    border: none; /* Kenarlık yok */
+    padding: 8px 15px; /* İç boşluk */
+    font-size: 14px; /* Yazı büyüklüğü */
+    cursor: pointer; /* Fare ile üzerine gelindiğinde el simgesi */
+    border-radius: 5px; /* Köşeleri yuvarlatma */
+    transition: background-color 0.3s ease; /* Arka plan rengi değişimi için geçiş efekti */
+}
+
+/* Silme butonuna fare ile üzerine gelindiğinde değişim */
+.remove-btn:hover {
+    background-color: #d32f2f; /* Koyu kırmızı arka plan */
+}
+
+/* Silme butonuna tıklanırken renk değişimi */
+.remove-btn:active {
+    background-color: #b71c1c; /* Çok koyu kırmızı arka plan */
 }
