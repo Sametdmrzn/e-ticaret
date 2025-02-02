@@ -74,20 +74,29 @@
 
 
 
-
-    // WhatsApp mesajını gönder
-    function sendWhatsAppMessage(message) {
-        // WhatsApp linkine mesajı ekle
-        const whatsappLink = `https://wa.me/?text=${encodeURIComponent(message)}`;
+    function sendCartToWhatsApp() {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        
+        if (cart.length === 0) {
+            alert("Sepetiniz boş!");
+            return;
+        }
+    
+        let message = "Sipariş Listesi:\n";
+        cart.forEach((item, index) => {
+            message += `${index + 1}) ${item.name} - ${item.price}₺\n`;
+        });
+    
+        message += "\n Sepetimde bulunan ürünleri istiyorum.";
+    
+        // WhatsApp linkini oluştur ve yeni sekmede aç
+        const whatsappLink = `https://wa.me/905469467889?text=${encodeURIComponent(message)}`;
         window.open(whatsappLink, "_blank");
     }
-
-    // Sayfa yüklendiğinde sepeti güncelle
-    window.onload = updateCart;
-
-
-
-
+    
+    // HTML'de bir butona bağla:
+    document.getElementById("send-cart").addEventListener("click", sendCartToWhatsApp);
+    
 
 
 
