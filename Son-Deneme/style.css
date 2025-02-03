@@ -252,7 +252,7 @@ body {
     color: #fff;
     text-align: center;
     padding: 20px 10px;
-    margin-top: 55px;
+    margin-top: 500px;
 }
 
 .footer-container {
@@ -590,3 +590,5 @@ transition: background-color 0.3s ease;
 .remove-btn:active {
     background-color: #b71c1c; /* Çok koyu kırmızı arka plan */
 }
+
+
